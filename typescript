@@ -1,0 +1,46 @@
+interface Produto {
+  nome: string;
+  preco: number;
+}
+
+class CarrinhoDeCompras {
+  produtos: Produto[];
+
+  constructor() {
+    this.produtos = [];
+  }
+
+  adicionarProduto(produto: Produto): void {
+    this.produtos.push(produto);
+  }
+
+  calcularTotal(): number {
+    let total = 0;
+    for (const produto of this.produtos) {
+      total += produto.preco;
+    }
+    return total;
+  }
+
+  exibirCarrinho(): void {
+    console.log
+    ('Carrinho de Compras:');
+    for (const produto of this.produtos) {
+      console.log(`${produto.nome} - R$ ${produto.preco.toFixed(2)}`);
+    }
+    console.log(`Total: R$ ${this.calcularTotal().toFixed(2)}`);
+  }
+}
+
+// Exemplo de uso
+const carrinho = new CarrinhoDeCompras();
+
+const produto1: Produto = { nome: 'Camiseta', preco: 29.99 };
+const produto2: Produto = { nome: 'Calça', preco: 59.99 };
+const produto3: Produto = { nome: 'Tênis', preco: 99.99 };
+
+carrinho.adicionarProduto(produto1);
+carrinho.adicionarProduto(produto2);
+carrinho.adicionarProduto(produto3);
+
+carrinho.exibirCarrinho();
