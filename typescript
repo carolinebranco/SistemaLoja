@@ -28,7 +28,7 @@ class CarrinhoDeCompras {
     for (const produto of this.produtos) {
       console.log(`${produto.nome} - R$ ${produto.preco.toFixed(2)}`);
     }
-    console.log(`Total: R$ ${this.calcularTotal().toFixed(2)}`);
+    console.log(`Total: R$ ${this.calcularTotal().toFixed(2)}`).1
   }
 }
 
