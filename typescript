@@ -36,7 +36,7 @@ class CarrinhoDeCompras {
 const carrinho = new CarrinhoDeCompras();
 
 const produto1: Produto = { nome: 'Camiseta', preco: 29.99 };
-const produto2: Produto = { nome: 'Calça', preco: 59.99 }
+const produto2: Produto = { nome: 'Calça', preco: 120.99 }
 const produto3: Produto = { nome: 'Tênis', preco: 100,99 }
 
 carrinho.adicionarProduto(produto1);
